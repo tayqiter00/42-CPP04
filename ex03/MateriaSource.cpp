@@ -60,7 +60,7 @@ AMateria	*MateriaSource::createMateria(std::string const &type)
 {
 	for (size_t i = 0; i < MAX_SRC; i++)
 	{
-		if (_srcs[i]->getType() == type)
+		if (_srcs[i] != NULL && _srcs[i]->getType() == type)
 		{
 			cout << "Created new materia " << _srcs[i]->getType() << endl;
 			return (_srcs[i]->clone());

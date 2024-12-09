@@ -97,6 +97,7 @@ void	Character::unequip(int idx)
 
 void	Character::use(int idx, ICharacter &target)
 {
+	cout << this->getName() << ": ";
 	if (idx >= 0 && idx <= 3 && _inventory[idx])
 	{
 		_inventory[idx]->use(target);

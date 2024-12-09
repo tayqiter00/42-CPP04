@@ -11,6 +11,7 @@ class AMateria
 {
 	protected:
 		std::string const _type;
+
 	public:
 		AMateria(void);
 		AMateria(const AMateria &obj);
