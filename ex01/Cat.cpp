@@ -6,32 +6,16 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 18:09:06 by qtay              #+#    #+#             */
-/*   Updated: 2024/11/09 00:16:36 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 15:34:18 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-/**
- * Not sure to use which method
- */
-// Cat::Cat(void) : Animal("Cat"), _brain(nullptr)
-// {
-//     try {
-//         _brain = new Brain();
-//         std::cout << "Cat default constructor called\n";
-//     } catch (const std::bad_alloc& e) {
-//         std::cerr << "Memory allocation for _brain failed: " << e.what() << '\n';
-//     }
-// }
-Cat::Cat(void) : Animal("Cat"), _brain(new Brain())
+Cat::Cat(void) : Animal(), _brain(new Brain())
 {
+	this->_type = "Cat";
 	std::cout << "Cat default constructor called\n";
-}
-
-Cat::Cat(std::string type) : Animal(type), _brain(new Brain())
-{
-	std::cout << "Cat parameterized constructor called\n";	
 }
 
 /**

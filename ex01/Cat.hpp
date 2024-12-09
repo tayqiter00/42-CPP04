@@ -6,7 +6,7 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 18:09:08 by qtay              #+#    #+#             */
-/*   Updated: 2024/09/24 15:29:29 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 15:32:35 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Cat : public Animal
 		Brain *_brain;
 	public:
 		Cat(void);
-		Cat(std::string type);
 		Cat(const Cat &obj);
 		Cat	&operator=(const Cat &obj);
 		~Cat(void);

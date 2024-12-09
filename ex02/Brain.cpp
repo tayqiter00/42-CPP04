@@ -6,7 +6,7 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:07:12 by qtay              #+#    #+#             */
-/*   Updated: 2024/09/24 15:30:04 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 15:51:32 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Brain::Brain(void)
 }
 /**
  * Copy constructors in C++ perform a shallow copy of the class members.
- * This means only the address of the array is copied, not its content.So a
+ * This means only the address of the array is copied, not its content. So a
  * for loop is needed to copy the contents element-by-element. This also avoids
  * sharing memory.
  */

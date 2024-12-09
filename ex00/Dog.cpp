@@ -6,20 +6,16 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:32:00 by qtay              #+#    #+#             */
-/*   Updated: 2024/11/08 15:50:54 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 15:03:35 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(void) : Animal("Dog")
+Dog::Dog(void) : Animal()
 {
+	this->_type = "Dog";
 	std::cout << "Dog default constructor called\n";	
-}
-
-Dog::Dog(std::string type) : Animal(type)
-{
-	std::cout << "Dog parameterized constructor called\n";	
 }
 
 Dog::Dog(const Dog &obj) : Animal(obj)
@@ -29,7 +25,9 @@ Dog::Dog(const Dog &obj) : Animal(obj)
 
 Dog	&Dog::operator=(Dog const &obj)
 {
-	this->_type = obj._type;
+	if (this != &obj)
+		this->_type = obj._type;
+	std::cout << "Dog copy assignment operator called\n";
 	return (*this);	
 }
 

@@ -6,7 +6,7 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 18:19:26 by qtay              #+#    #+#             */
-/*   Updated: 2024/12/05 22:47:52 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 16:11:22 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,16 @@ int main()
 {
 	// std::cout << std::boolalpha;
 	// std::cout << "Is the AAnimal class abstract?: " << std::is_abstract<AAnimal>::value << std::endl;
-	AAnimal	test; // This will fail during compilation, showing that it's abstract
+	// AAnimal	test; // This will fail during compilation, showing that it's abstract
 	// instantiate(AAnimal()); // this as well (C++11)
+	AAnimal	*test = new Cat();
+	std::cout << test->getType() << std::endl;
+	test->makeSound();
+
+	AAnimal	*test2 = new Dog();
+	std::cout << test2->getType() << std::endl;
+	test2->makeSound();
+	delete test;
+	delete test2;
 	return (0);
 }

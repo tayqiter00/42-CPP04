@@ -6,7 +6,7 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 18:19:26 by qtay              #+#    #+#             */
-/*   Updated: 2024/12/07 17:16:11 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 15:42:55 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,19 +44,15 @@ int main()
     for (size_t i = 0; i < SIZE; ++i)
 		delete animals[i];
 
-	std::cout << "\n[ DEEP COPY CHECK]\n";
-	// ensure deep copy
-	// {
-	// 	Cat	originalCat;
-	// 	// Cat	copiedCat = originalCat; // this method will invoke the Animal->Brain->Cat copy constructors
-	// 	Cat	copiedCat; // this method will invoke Animal->Brain->Cat default constructors
-	// 	copiedCat = originalCat; 
-	// 	std::cout << "\nOriginal Cat Brain ptr: " << originalCat.getBrainAddr() << std::endl;
-	// 	std::cout << "Copied Cat Brain ptr: " << copiedCat.getBrainAddr() << std::endl;
-	// }
+	std::cout << "\n[ DEEP COPY CHECK ]\n";
 	Dog basic;
 	{
 		Dog tmp = basic;
 	}
+	// Dog basic2;
+	// {
+	// 	Dog tmp2;
+	// 	tmp2 = basic2;
+	// }
 	return (0);
 }

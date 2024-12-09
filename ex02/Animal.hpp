@@ -6,7 +6,7 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 18:01:40 by qtay              #+#    #+#             */
-/*   Updated: 2024/11/09 00:42:23 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 15:51:14 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,8 @@ class Animal
 		std::string	_type;
 	public:
 		Animal(void);
-		Animal(std::string type);
-		Animal(const Animal &obj); // To be defined
-		Animal	&operator=(Animal const &obj); // To be defined
+		Animal(const Animal &obj);
+		Animal	&operator=(Animal const &obj);
 		virtual ~Animal(void);
 		std::string	getType(void) const;
 		virtual void	makeSound(void) const;

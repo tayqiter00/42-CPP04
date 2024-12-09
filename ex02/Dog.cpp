@@ -6,23 +6,19 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:32:00 by qtay              #+#    #+#             */
-/*   Updated: 2024/09/24 14:13:23 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 16:06:32 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(void) : Animal("Dog"), _brain(new Brain())
+Dog::Dog(void) : AAnimal(), _brain(new Brain())
 {
+	this->_type = "Dog";
 	std::cout << "Dog default constructor called\n";	
 }
 
-Dog::Dog(std::string type) : Animal(type), _brain(new Brain())
-{
-	std::cout << "Dog parameterized constructor called\n";	
-}
-
-Dog::Dog(const Dog &obj) : Animal(obj) // Call the base class copy constructor
+Dog::Dog(const Dog &obj) : AAnimal(obj)
 {
 	this->_brain = new Brain(*obj._brain);
 	std::cout << "Dog copy constructor called\n";
@@ -32,9 +28,10 @@ Dog	&Dog::operator=(Dog const &obj)
 {
 	if (this != &obj)
 	{
-		this->_type = obj._type;
+		AAnimal::operator=(obj);
 		delete this->_brain;
 		this->_brain = new Brain(*obj._brain);
+		std::cout << "Dog copy assignment operator called\n";
 	}
 	return (*this);	
 }
@@ -49,3 +46,4 @@ void	Dog::makeSound(void) const
 {
 	std::cout << "The dog says: woof woof\n";	
 }
+

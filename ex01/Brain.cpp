@@ -6,7 +6,7 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 15:07:12 by qtay              #+#    #+#             */
-/*   Updated: 2024/11/08 23:31:03 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 15:36:49 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ Brain::Brain(void)
 }
 /**
  * Or simply *this = obj but it seems that copying explicitly is good practice.
- * It's actually just using the Brain copy assignment operator below.
  */
 Brain::Brain(const Brain &obj)
 {

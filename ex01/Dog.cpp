@@ -6,20 +6,16 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:32:00 by qtay              #+#    #+#             */
-/*   Updated: 2024/11/09 00:18:16 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 15:35:51 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(void) : Animal("Dog"), _brain(new Brain())
+Dog::Dog(void) : Animal(), _brain(new Brain())
 {
+	this->_type = "Dog";
 	std::cout << "Dog default constructor called\n";	
-}
-
-Dog::Dog(std::string type) : Animal(type), _brain(new Brain())
-{
-	std::cout << "Dog parameterized constructor called\n";	
 }
 
 Dog::Dog(const Dog &obj) : Animal(obj)

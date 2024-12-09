@@ -6,7 +6,7 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 18:01:40 by qtay              #+#    #+#             */
-/*   Updated: 2024/11/08 15:45:18 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 14:56:51 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ class Animal
 
 	public:
 		Animal(void);
-		Animal(std::string type);
 		Animal(const Animal &obj);
 		Animal	&operator=(Animal const &obj);
 		virtual	~Animal(void);

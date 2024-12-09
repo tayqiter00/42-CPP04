@@ -6,7 +6,7 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 18:09:08 by qtay              #+#    #+#             */
-/*   Updated: 2024/11/08 15:10:33 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 14:58:16 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ class Cat : public Animal
 {
 	public:
 		Cat(void);
-		Cat(std::string type);
 		Cat(const Cat &obj);
 		Cat	&operator=(Cat const &obj);
 		~Cat(void);

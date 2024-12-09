@@ -6,7 +6,7 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 13:43:48 by qtay              #+#    #+#             */
-/*   Updated: 2024/12/05 22:22:49 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 15:04:15 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,8 @@ class WrongAnimal
 		std::string	_type;
 	public:
 		WrongAnimal(void);
-		WrongAnimal(std::string type);
-		WrongAnimal(const WrongAnimal &obj); // To be defined
-		WrongAnimal	&operator=(WrongAnimal const &obj); // To be defined
+		WrongAnimal(const WrongAnimal &obj);
+		WrongAnimal	&operator=(WrongAnimal const &obj);
 		~WrongAnimal(void);
 		std::string	getType(void) const;
 		void	makeSound(void) const;

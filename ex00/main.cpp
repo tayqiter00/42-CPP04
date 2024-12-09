@@ -6,7 +6,7 @@
 /*   By: qtay <qtay@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 18:19:26 by qtay              #+#    #+#             */
-/*   Updated: 2024/12/07 17:11:52 by qtay             ###   ########.fr       */
+/*   Updated: 2024/12/09 15:25:11 by qtay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,10 @@ int main()
 		const Animal* meta = new Animal();
 		const Animal* i = new Cat();
 		const Animal* j = new Dog();
+
 		std::cout << meta->getType() << " " << std::endl;
-		std::cout << j->getType() << " " << std::endl;
 		std::cout << i->getType() << " " << std::endl;
+		std::cout << j->getType() << " " << std::endl;
 		meta->makeSound();
 		i->makeSound();
 		j->makeSound();
