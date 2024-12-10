@@ -24,11 +24,12 @@ int main()
 	src->learnMateria(temp); // max 4 materia srcs
 
 	ICharacter* me = new Character("me");
-	temp2 = src->createMateria("ice");
+	temp2 = src->createMateria("ice"); // 3 lines
 	temp3 = src->createMateria("cure");
 	temp4 = src->createMateria("ice");
 	temp5 = src->createMateria("cure");
 	temp6 = src->createMateria("unknown"); // create unknown materia
+	(void)temp6;
 	me->equip(temp);
 	me->equip(temp2);
 	me->equip(temp3);
@@ -49,6 +50,7 @@ int main()
 	bob->unequip(4); // unequip unexisting Materia
 
 	Character	charlie("charlie"); // deep copy tests
+	charlie.equip(new Ice());
 	{
 		Character	david = charlie;
 	}
@@ -56,9 +58,18 @@ int main()
 	{
 		david = charlie;
 	}
-	// delete bob;
-	// delete me;
-	// delete temp;
-	// delete src;
+
+	MateriaSource	m1; // deep copy tests
+	m1.learnMateria(new Cure()); 
+	{
+		MateriaSource	m2 = m1;
+	}
+	MateriaSource	m2;
+	{
+		m2 = m1;
+	}
+	delete bob;
+	delete me;
+	delete src;
 	return 0;
 }
