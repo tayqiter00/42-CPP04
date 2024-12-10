@@ -25,7 +25,8 @@ Character::Character(const Character &obj) : _name(obj._name)
 	{
 		if (obj._inventory[i])
 			_inventory[i] = obj._inventory[i]->clone();
-		_inventory[i] = NULL;
+		else
+			_inventory[i] = NULL;
 	}
 	cout << "Character copy constructor called" << endl;
 }
@@ -41,15 +42,13 @@ Character	&Character::operator=(const Character &obj)
 		for (size_t i = 0; i < MAX_SLOTS; i++)
 		{
 			if (_inventory[i])
+			{
 				delete _inventory[i];
-			_inventory[i] = NULL;
-		}
-		for (size_t i = 0; i < MAX_SLOTS; i++)
-		{
+				_inventory[i] = NULL;
+			}
 			if (obj._inventory[i])
 				_inventory[i] = obj._inventory[i]->clone();
-		}
-		
+		}		
 	}
 	cout << "Character copy assignment operator called" << endl;
 	return (*this);
@@ -92,7 +91,7 @@ void	Character::unequip(int idx)
 		_inventory[idx] = NULL;
 	}
 	else
-		cout << "[Unequip] Invalid inventory index" << endl;
+		cout << this->getName() << ": " << "[Unequip] Invalid inventory index" << endl;
 }
 
 void	Character::use(int idx, ICharacter &target)
