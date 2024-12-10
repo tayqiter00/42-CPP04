@@ -5,9 +5,7 @@ using std::endl;
 MateriaSource::MateriaSource(void)
 {
 	for (size_t i = 0; i < MAX_SRC; i++)
-	{
 		_srcs[i] = NULL;
-	}
 	cout << "MateriaSource default constructor called" << endl;
 }
 
@@ -15,7 +13,10 @@ MateriaSource::MateriaSource(const MateriaSource &obj)
 {
 	for (size_t i = 0; i < MAX_SRC; i++)
 	{
-		_srcs[i] = obj._srcs[i];
+		if (obj._srcs[i])
+			_srcs[i] = obj._srcs[i]->clone();
+		else
+			_srcs[i] = NULL;
 	}
 	cout << "MateriaSource copy constructor called" << endl;
 }
@@ -26,7 +27,13 @@ MateriaSource	&MateriaSource::operator=(const MateriaSource &obj)
 	{
 		for (size_t i = 0; i < MAX_SRC; i++)
 		{
-			_srcs[i] = obj._srcs[i];
+			if (_srcs[i])
+			{
+				delete _srcs[i];
+				_srcs[i] = NULL;
+			}
+			if (obj._srcs[i])
+				_srcs[i] = obj._srcs[i]->clone();
 		}
 	};
 	cout << "MateriaSource copy assignment operator called" << endl;
